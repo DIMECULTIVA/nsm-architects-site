@@ -11,21 +11,33 @@
 <body>
 
     <nav class="navbar">
-        <div class="container">
+        <div class="container nav-container">
             <h1 class="logo">NSM ARCHITECTS</h1>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="mobile-btn"><a href="https://wa.me/27763088254" class="nav-cta">Chat Now</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="hero">
+        <div class="overlay"></div>
+
+        <video autoplay muted loop playsinline class="back-video">
+            <source src="https://videos.pexels.com/video-files/3205915/3205915-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+
         <div class="hero-content">
             <h2>Designing the Future, Building Your Vision</h2>
             <p>Premium architectural services for residential and commercial projects.</p>
-            <a href="https://wa.me/1234567890" class="btn-gold"><i class="fab fa-whatsapp"></i> Start Your Project</a>
+            <a href="https://wa.me/27763088254" class="btn-gold"><i class="fab fa-whatsapp"></i> Start Your Project</a>
         </div>
     </header>
 
@@ -64,15 +76,24 @@
             <h3>Ready to discuss your project?</h3>
             <p>Our AI Assistant is ready to qualify your lead and book a consultation instantly.</p>
             <br>
-            <a href="https://wa.me/1234567890" class="btn-white">Chat with us on WhatsApp</a>
+            <a href="https://wa.me/27763088254" class="btn-white"><i class="fab fa-whatsapp"></i> 076 308 8254</a>
             <br><br>
-            <p class="small-contact">Or email us at: info@nsmarchitects.com</p>
+            <p class="small-contact">Email us at: <a href="mailto:info@nsmarch.co.za" style="color: white; text-decoration: underline;">info@nsmarch.co.za</a></p>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2024 NSM Architects. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
