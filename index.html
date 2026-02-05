@@ -40,7 +40,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <img src="https://via.placeholder.com/200" alt="Lead Architect" class="team-img">
-                    <h3>Keo</h3>
+                    <h3>Principal Architect</h3>
                     <p class="role">Lead Architect (Pr.Arch)</p>
                 </div>
             </div>
@@ -100,27 +100,31 @@
             <h2>Featured Projects</h2>
             <p class="subtitle">A selection of our recent residential and commercial work.</p>
             <div class="portfolio-grid">
+
                 <div class="project-card">
-                    <img src="site.jpg" alt="Luxury House Sandton">
+                    <img src="site.jpg" alt="Luxury Residential">
                     <div class="project-info">
                         <h3>Luxury Residential</h3>
                         <p>Sandton, JHB</p>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Office Space">
+                    <img src="csite.jpg" alt="Commercial Office">
                     <div class="project-info">
                         <h3>Commercial Office</h3>
                         <p>Cape Town CBD</p>
                     </div>
                 </div>
+
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Interior Renovation">
+                    <img src="isite.jpg" alt="Interior Renovation">
                     <div class="project-info">
                         <h3>Interior Renovation</h3>
                         <p>Pretoria East</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -141,7 +145,7 @@
                 </div>
 
                 <div class="testimonial-slide">
-                    <p>"I was worried about municipal approvals, but Keo and the team handled everything. Highly recommended!"</p>
+                    <p>"I was worried about municipal approvals, but the team handled everything. Highly recommended!"</p>
                     <h4>- Thabo M., Midrand</h4>
                 </div>
 
@@ -179,17 +183,11 @@
         const slides = document.querySelectorAll('.testimonial-slide');
 
         function changeSlide() {
-            // Hide current slide
             slides[currentSlide].classList.remove('active');
-
-            // Calculate next slide
             currentSlide = (currentSlide + 1) % slides.length;
-
-            // Show next slide
             slides[currentSlide].classList.add('active');
         }
 
-        // Change slide every 5000 milliseconds (5 seconds)
         setInterval(changeSlide, 5000);
     </script>
 
