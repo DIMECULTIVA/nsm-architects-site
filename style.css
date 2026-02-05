@@ -42,7 +42,12 @@ body {
         text-decoration: none;
         color: #333;
         font-weight: 500;
+        transition: 0.3s;
     }
+
+        .nav-links a:hover {
+            color: #d4af37;
+        }
 
 .cta-btn {
     background: #25D366;
@@ -50,6 +55,14 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     font-weight: bold;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
 }
 
 /* HERO SECTION */
@@ -217,10 +230,10 @@ h2 {
     padding: 20px;
 }
 
-/* TESTIMONIAL SLIDER (NEW) */
+/* TESTIMONIAL SLIDER */
 .testimonial-slider {
     position: relative;
-    height: 200px; /* Space for the reviews */
+    height: 200px;
     max-width: 700px;
     margin: 0 auto;
     overflow: hidden;
@@ -292,24 +305,47 @@ footer {
             color: #d4af37;
         }
 
-/* RESPONSIVE */
+/* RESPONSIVE (MOBILE) */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger on mobile */
     }
 
     .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        text-align: center;
+        padding: 0;
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
+
+        .nav-links.active {
+            max-height: 400px; /* Expand when clicked */
+            padding: 20px 0;
+        }
+
+        .nav-links li {
+            margin: 15px 0;
+            width: 100%;
+        }
 
     .hero-content h1 {
         font-size: 32px;
     }
 
     .testimonial-slider {
-        height: 300px; /* More height for mobile text wrapping */
+        height: 350px; /* More height for mobile text */
     }
 }
