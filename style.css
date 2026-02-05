@@ -45,7 +45,7 @@ body {
     }
 
 .cta-btn {
-    background: #25D366; /* WhatsApp Green */
+    background: #25D366;
     color: white !important;
     padding: 10px 20px;
     border-radius: 5px;
@@ -74,7 +74,7 @@ body {
     height: auto;
     z-index: -1;
     transform: translate(-50%, -50%);
-    filter: brightness(0.5); /* Darkens video so text pops */
+    filter: brightness(0.5);
 }
 
 .hero-content h1 {
@@ -86,7 +86,7 @@ body {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    background: #d4af37; /* Gold color */
+    background: #d4af37;
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -119,7 +119,7 @@ h2 {
     color: #222;
 }
 
-/* MEET THE TEAM */
+/* TEAM */
 .team-grid {
     display: flex;
     justify-content: center;
@@ -144,7 +144,7 @@ h2 {
     font-style: italic;
 }
 
-/* SERVICES GRID */
+/* SERVICES */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,7 +163,7 @@ h2 {
         margin-bottom: 15px;
     }
 
-/* PROCESS SECTION (NEW) */
+/* PROCESS */
 .process-grid {
     display: flex;
     justify-content: center;
@@ -193,7 +193,7 @@ h2 {
     color: #333;
 }
 
-/* PORTFOLIO GRID */
+/* PORTFOLIO */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -217,24 +217,41 @@ h2 {
     padding: 20px;
 }
 
-/* TESTIMONIALS (NEW) */
-.testimonial-card {
-    background: #fff;
-    padding: 40px;
+/* TESTIMONIAL SLIDER (NEW) */
+.testimonial-slider {
+    position: relative;
+    height: 200px; /* Space for the reviews */
     max-width: 700px;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+.testimonial-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background: #fff;
+    padding: 40px;
     border-left: 5px solid #d4af37;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-    .testimonial-card p {
+    .testimonial-slide.active {
+        opacity: 1;
+        z-index: 2;
+    }
+
+    .testimonial-slide p {
         font-size: 18px;
         font-style: italic;
         color: #555;
         margin-bottom: 20px;
     }
 
-/* CONTACT SECTION */
+/* CONTACT */
 .dark-mode {
     background-color: #222;
     color: white;
@@ -275,7 +292,7 @@ footer {
             color: #d4af37;
         }
 
-/* MOBILE RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -290,5 +307,9 @@ footer {
 
     .hero-content h1 {
         font-size: 32px;
+    }
+
+    .testimonial-slider {
+        height: 300px; /* More height for mobile text wrapping */
     }
 }

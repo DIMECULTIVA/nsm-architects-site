@@ -40,7 +40,7 @@
             <div class="team-grid">
                 <div class="team-member">
                     <img src="https://via.placeholder.com/200" alt="Lead Architect" class="team-img">
-                    <h3>Your Name</h3>
+                    <h3>Keo</h3>
                     <p class="role">Lead Architect (Pr.Arch)</p>
                 </div>
             </div>
@@ -101,7 +101,7 @@
             <p class="subtitle">A selection of our recent residential and commercial work.</p>
             <div class="portfolio-grid">
                 <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1600596542815-2495db98dada?auto=format&fit=crop&w=800&q=80" alt="Luxury House">
+                    <img src="site.jpg" alt="Luxury House Sandton">
                     <div class="project-info">
                         <h3>Luxury Residential</h3>
                         <p>Sandton, JHB</p>
@@ -128,9 +128,28 @@
     <section id="testimonials" class="section">
         <div class="container">
             <h2>What Clients Say</h2>
-            <div class="testimonial-card">
-                <p>"NSM Architects helped me visualize my dream home perfectly. The 3D renders were incredible and the council submission was painless."</p>
-                <h4>- Sarah J., Pretoria</h4>
+            <div class="testimonial-slider">
+
+                <div class="testimonial-slide active">
+                    <p>"NSM Architects helped me visualize my dream home perfectly. The 3D renders were incredible and the council submission was painless."</p>
+                    <h4>- Sarah J., Pretoria</h4>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p>"Professional, punctual, and highly creative. They transformed our old office space into something modern and productive."</p>
+                    <h4>- Michael K., Sandton</h4>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p>"I was worried about municipal approvals, but Keo and the team handled everything. Highly recommended!"</p>
+                    <h4>- Thabo M., Midrand</h4>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p>"Great attention to detail. They listened to exactly what we wanted and delivered within budget."</p>
+                    <h4>- Emily R., Centurion</h4>
+                </div>
+
             </div>
         </div>
     </section>
@@ -138,7 +157,7 @@
     <section id="contact" class="section dark-mode">
         <div class="container">
             <h2>Ready to discuss your project?</h2>
-            <p>Our AI Assistant is ready to qualify your lead and book a consultation instantly.</p>
+            <p>Our expert team is ready to qualify your needs and book a consultation instantly.</p>
             <a href="https://wa.me/27763088254" class="hero-btn">Start Your Project</a>
             <p class="email-text">Email us at: <a href="mailto:info@nsmarch.co.za">info@nsmarch.co.za</a></p>
         </div>
@@ -154,6 +173,25 @@
             <p>&copy; 2024 NSM Architects. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.testimonial-slide');
+
+        function changeSlide() {
+            // Hide current slide
+            slides[currentSlide].classList.remove('active');
+
+            // Calculate next slide
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Show next slide
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Change slide every 5000 milliseconds (5 seconds)
+        setInterval(changeSlide, 5000);
+    </script>
 
 </body>
 </html>
